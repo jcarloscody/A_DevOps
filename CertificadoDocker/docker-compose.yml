@@ -1,0 +1,25 @@
+#> docker run -d --network minha-rede -p 3000:4000 imagem-aplicacao
+#> docker run -d --network minha-rede --name meu-banco mongo:4.4.6
+# como ficaria estes comandos aqui?
+
+version: '3.9'
+services:
+  mongobd: #posso usar qq nome
+    image: mongo:4.4.6
+    container_name: meu-banco
+    network:
+      - minha-rede 
+
+  nomeAplicacao:
+    image: imagem-aplicacao
+    container_name: nome_container
+    network:
+      - minha-rede
+    ports:
+      -3000:4000 #sempre é host:container
+    depends_on:
+      - mongobd  #expressa dependencias entre servicos 
+
+networks:
+  minha-rede:
+    driver: bridge
