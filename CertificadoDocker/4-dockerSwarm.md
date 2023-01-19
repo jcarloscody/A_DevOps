@@ -7,6 +7,9 @@ A Docker Machine cria máquinas virtuais bem leves já provisionadas com o Docke
 
 - Um cluster é um conjunto de máquinas dividindo poder computacional
 
+- O que acontecerá com o nosso swarm em caso de perda do manager? Não conseguiremos mais executar comandos de leitura e/ou criar novos serviços.Com a ausência do manager, não teremos mais nós capazes de executar comandos administrativos.
+  -   por isto é importante fazer o backup
+
 > docker-machine ls
 - lista as maquinas virtuais
 > docker-machine create -d virtualbox vm1

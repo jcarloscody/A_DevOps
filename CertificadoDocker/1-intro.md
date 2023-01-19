@@ -52,9 +52,9 @@ docker push usuario_name/nomeqq:versao
   - tmpfs: temporário, só vai funcionar ho host linux, ele vai se perder quando sair. a ideia é persistir dados em memoria no host, mas os dados não estao sendo escritos na camada rw, estao sendo escritos diretamente na camada do host
 
 
-> BRIDGE: rede q tem dns
+> BRIDGE: serve para permitir a comunicação entre diferentes containers em um mesmo host 
 > NONE: rede q ñ tem qq interface vinculada a ele.
-> HOST: o container criado sob este tipo de rede, ou seja, na aplicação pratica o container terá a mesma port do host, ouseja, tira qq isolamento entre a interface de rede do container e do host.
+> HOST: Serve para fazer comunicaão entre container e maquina, ou seja, a maquina que está rodando o container consegue se comunicar com o ip deste container por causa deste driver.  o container criado sob este tipo de rede, ou seja, na aplicação pratica o container terá a mesma port do host, ouseja, tira qq isolamento entre a interface de rede do container e do host.
 
 > BANCO DE DADOS COMUNICAÇÃO
 - 
