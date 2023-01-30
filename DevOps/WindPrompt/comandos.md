@@ -24,3 +24,10 @@
 - copia uma pasta e seus subdiretorios
 > copy %PATH% > backupPATH.txt
 - cópia dos paths do SO
+> echo %PATH%
+- imprime todas as variaveis
+> set PATH=%PATH%;C:\Users\blablabla\bin
+- adiciona este path ao path do SO
+> set Variavel=content
+- cria variável
+> 
