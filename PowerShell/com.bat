@@ -28,5 +28,17 @@ get-command -name *rename* //vc ira descobrir comando que tem esta porção de s
 get-command -verb *rename* //vc ira descobrir comando que tem esta porção de string 
 get-help -name rename-item
 
-//Criar apelido para comandos
+//Criar apelido para comandos. para usar este comando é ideial ser dentro de um profile
 new-alias -name "rename" rename-item 
+
+//PROFILE - crie um profile dentro de um diretorio que vc quer
+//dentro do arquivo criado coloque os comando que vc quer... seja para criar um novo alias...
+new-item $profile
+
+
+//POLITICA DE RESTRIÇÕES
+get-help about_execution_policies
+get-executionpolicy //ver a politica vigente
+set-executionpolicy unrestricted //colocar a politica de restricao desejada
+new-item $profile.allusersallhosts
+notepad $profile.allusersallhosts //abri o bloco de notas
