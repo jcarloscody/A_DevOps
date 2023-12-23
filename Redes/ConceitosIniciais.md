@@ -23,4 +23,26 @@
 ping www.google.com.br
 tracert www.google.com.br
 ```
-forn
+
+> Conceitos
+- protocolo icmp: é a base de funcionamento do comando ping. ele controla o envio do pct de mss e a recepção.
+- protocolo arp: permite identificar o endereço físico de uma máquina a partir do endereço ip
+- Hub: funciona como carteiro, porém não identifica para quem vai a carta, apenas envia para todo mundo que está conectado nele. funciona como broadcast, manda para todos que estão conectados, isto gera congestionamento na rede.
+- DNS: protocolo que funciona como uma lista telefonica, identificamos cada número pelo nome do agente. para isto usamos a ferramenta nslookup. esta ferramenta indicará o ip do name server.
+```
+nslookup
+```
+- conector RJ45
+- TIA - associação internacional de telecomunicações
+- placa de rede: temos diferentes canais, temos canais dedicados para envio, outros para recepção.
+- cabo cruzado/crossover
+
+> redes com Switches
+- Switches: utiliza o protocolo arp para entender quais dispositivos estão plugados em suas portas, e assim verifica quem é quem na rede, após esta primeira interação, ele armazena na memória interno qual o endereço mac (endereço físico da placa de rede de cada dispositivo) está associado o endereço ip. Como o switche faz uso de memório, caso a memória se esgote, ele funcionará como Hub. ELE TAMBÉM permite conectar diferentes dipositivos em uma única rde.
+- endereço mac: é como se fosse o rg do dispositivo(atribuido pelo fabricante), usado apenas na rede interna. quando precisa mandar o pct de dados para um dispositivo que está externo a rede, ele precisa de um documento universalmente aceita, que é o endereço ip. quando precisa se conectar a internet, precisa-se de outro endereço  para que os outros dispositivos consigam se comunicar, ip.
+```
+ipconfig /all
+```
+- soft monitoramento de rede: wireshark
+- subnet mask: identifica qual parte de endereço de ip se refere ao endereço da rede e qual parte podemos usar para modificar e atribuir um endereço diferente dessa rede para cada dispositivo que queremos conectar  
+- Roteador: 
